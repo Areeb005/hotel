@@ -9,6 +9,7 @@ import Gallery from './pages/Gallery';
 import Booking from './pages/Booking';
 import Contact from './pages/Contact';
 import Single from './pages/Single';
+import { useEffect } from 'react';
 
 
 
@@ -18,6 +19,11 @@ import Single from './pages/Single';
 
 
 function App() {
+
+useEffect(() =>{
+  
+}, [])
+
   return <>
     <Navbar />
 

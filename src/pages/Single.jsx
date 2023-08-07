@@ -2,6 +2,8 @@ import Breadcrumb from "../components/Breadcrumb"
 import Button from "../components/Button"
 import { HiOutlineUserCircle, HiOutlineArrowsExpand, HiCheck } from "react-icons/hi";
 import { BiBed } from "react-icons/bi";
+import RoomPageSlider from "../components/RoomPageSlider";
+
 
 
 const Single = () => {
@@ -15,6 +17,10 @@ const Single = () => {
 
         <div className='m-auto px-12 max-xl:px-4 flex justify-center items-center'>
             <div className='p-8 max-md:px-4 w-full bg-black/40'>
+
+                <RoomPageSlider />
+
+
                 <div className="grid grid-cols-4 max-md:grid-cols-1 max-md:gap-4 border border-white/30 px-4 py-6 mb-4">
                     <div className="">
                         <p className='single-info-text'><HiOutlineUserCircle className='h-10 w-auto mr-3' />2 Guests</p>
@@ -38,13 +44,13 @@ const Single = () => {
                     <div className="">
                         <h3 className="contact-heading">Room Facilities</h3>
                         <ul className="contact-text font-light">
-                            <li className="single-info-li"><HiCheck className="check-icon"/> 48" HD TV with more than 60 channels</li>
-                            <li className="single-info-li"><HiCheck className="check-icon"/> Coffee and tea makers</li>
-                            <li className="single-info-li"><HiCheck className="check-icon"/> Hot & cold bathing</li>
-                            <li className="single-info-li"><HiCheck className="check-icon"/> High comfortable mattress bed</li>
-                            <li className="single-info-li"><HiCheck className="check-icon"/> Hight quality bed sheets</li>
-                            <li className="single-info-li"><HiCheck className="check-icon"/> Free WIFI internet connection</li>
-                            <li className="single-info-li"><HiCheck className="check-icon"/> Connecting room by request</li>
+                            <li className="single-info-li"><HiCheck className="check-icon" /> 48" HD TV with more than 60 channels</li>
+                            <li className="single-info-li"><HiCheck className="check-icon" /> Coffee and tea makers</li>
+                            <li className="single-info-li"><HiCheck className="check-icon" /> Hot & cold bathing</li>
+                            <li className="single-info-li"><HiCheck className="check-icon" /> High comfortable mattress bed</li>
+                            <li className="single-info-li"><HiCheck className="check-icon" /> Hight quality bed sheets</li>
+                            <li className="single-info-li"><HiCheck className="check-icon" /> Free WIFI internet connection</li>
+                            <li className="single-info-li"><HiCheck className="check-icon" /> Connecting room by request</li>
                         </ul>
                     </div>
                 </div>

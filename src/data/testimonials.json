@@ -1,0 +1,22 @@
+{
+    "testimonials": [
+        {
+        "id": 1,
+        "name": "Benedict Mervine",
+        "review": "The rooms were clean, very comfortable, and the staff was amazing. They went over and beyond to help make our stay enjoyable. I highly recommend this hotel for anyone visiting downtown",
+        "designation": "Customer"
+    }, 
+        {
+        "id": 2,
+        "name": "Doretta Mccourtney",
+        "review": "They were extremely accommodating and allowed us to check in early at like 10am. We got to hotel super early and I didn’t wanna wait. So this was a big plus. The sevice was exceptional as well. Would definitely send a friend there.",
+        "designation": "Customer"
+    }, 
+        {
+        "id": 3,
+        "name": "Carole Hunckler",
+        "review": "I had a wonderful experience at the hotel. Every staff member I encountered, from the valet to the check- in to the cleaning staff were delightful and eager to help! Thank you! Will recommend to my colleagues!",
+        "designation": "Customer"
+    }
+]
+}

@@ -12,10 +12,16 @@ import sectionImg1 from '../assets/images/section-img1.jpg'
 import sectionImg2 from '../assets/images/section-img2.jpg'
 import sectionLast from '../assets/images/home-last.jpg'
 import ReactPlayer from 'react-player';
+import Slider from '../components/Slider';
+import RoomsData from '../data/rooms.json'
+
+
 
 
 
 const Home = () => {
+
+    const Rooms = RoomsData.rooms
 
     return <>
         <div className='bg-[url("./assets/images/main-bg.jpg")] bg-cover bg-top fixed w-full h-full -z-10'>
@@ -77,8 +83,7 @@ const Home = () => {
                     <h2 className='text-4xl text-white font-semibold mb-6'>Our Rooms</h2>
                     <div className='h-0.5 w-12 bg-[#A27238]'></div>
                 </div>
-
-                <RoomsCompenent gridCols={'grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1'} />
+                <Slider toMap={Rooms} />
             </div>
         </div>
 
@@ -86,8 +91,15 @@ const Home = () => {
             <TwoColumSection />
         </div>
 
-        <Testimonials />
-
+        <div className='section-5 py-20 bg-[url("./assets/images/home-last.jpg")] bg-cover bg-center'>
+            <div className="container m-auto px-4">
+                <div className='flex flex-col justify-center items-center mb-12'>
+                    <h2 className='text-4xl text-white font-semibold mb-6'>Testimonials</h2>
+                    <div className='h-0.5 w-12 bg-[#A27238]'></div>
+                </div>
+                <Testimonials />
+            </div>
+        </div>
     </>
 }
 
