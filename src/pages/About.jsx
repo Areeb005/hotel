@@ -16,7 +16,7 @@ const About = () => {
         <Breadcrumb text1="We Are" text2="Seaside" />
 
         <div className='section-2'>
-            <TwoColumSection image1="translate-y-3" image2="-translate-y-3"/>
+            <TwoColumSection/>
         </div>
 
 

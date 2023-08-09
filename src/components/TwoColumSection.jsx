@@ -10,7 +10,7 @@ import { ScrollTrigger } from 'gsap/all';
 gsap.registerPlugin(ScrollTrigger);
 
 
-const TwoColumSection = ({image1, image2}) => {
+const TwoColumSection = () => {
     const main = useRef();
 
     useLayoutEffect(() => {
@@ -22,12 +22,11 @@ const TwoColumSection = ({image1, image2}) => {
                 scrollTrigger: {
                     trigger: image1,
                     start: 'bottom bottom',
-                    end: 'top 20%',
+                    // end: 'top 0%',
                     scrub: true,
-                    rotation: 360 ,
-                    duration: 10,
                 },
-
+                duration: 20,
+                
             });
 
             const image2 = self.selector('.image2');
@@ -37,10 +36,10 @@ const TwoColumSection = ({image1, image2}) => {
                 scrollTrigger: {
                     trigger: image2,
                     start: 'bottom bottom',
-                    end: 'top 20%',
+                    // end: 'top 20%',
                     scrub: true,
-                    duration: 10,
                 },
+                duration: 20,
                 
             });
         }, main); // <- Scope!
@@ -48,16 +47,16 @@ const TwoColumSection = ({image1, image2}) => {
     }, []);
 
     return <>
-        <div className="m-auto px-12 py-12 max-lg:px-4">
+        <div ref={main} className="m-auto px-12 py-12 max-lg:px-4">
             <div className="grid grid-cols-2 max-lg:grid-cols-1 gap-6">
-                <div ref={main} className='grid grid-cols-2 gap-6'>
+                <div className='grid grid-cols-2 gap-6'>
 
                     <div className=''>
-                        <img src={sectionImg1} className={`image1 ${image1}`} alt="" />
+                        <img src={sectionImg1} className={`image1 -translate-y-10`} alt="" />
                     </div>
 
                     <div>
-                        <img src={sectionImg2} className={`image2 ${image2}`} alt="" />
+                        <img src={sectionImg2} className={`image2 translate-y-10`} alt="" />
                     </div>
 
                 </div>

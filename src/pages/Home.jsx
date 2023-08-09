@@ -13,7 +13,6 @@ import sectionImg2 from '../assets/images/section-img2.jpg'
 import sectionLast from '../assets/images/home-last.jpg'
 import ReactPlayer from 'react-player';
 import Slider from '../components/Slider';
-import RoomsData from '../data/rooms.json'
 
 
 
@@ -21,7 +20,6 @@ import RoomsData from '../data/rooms.json'
 
 const Home = () => {
 
-    const Rooms = RoomsData.rooms
 
     return <>
         <div className='bg-[url("./assets/images/main-bg.jpg")] bg-cover bg-top fixed w-full h-full -z-10'>
@@ -83,7 +81,7 @@ const Home = () => {
                     <h2 className='text-4xl text-white font-semibold mb-6'>Our Rooms</h2>
                     <div className='h-0.5 w-12 bg-[#A27238]'></div>
                 </div>
-                <Slider toMap={Rooms} />
+                <Slider />
             </div>
         </div>
 

@@ -27,8 +27,8 @@ const Testimonials = () => {
 
 
                 {
-                    testimonials.map((data) => {
-                        return <SwiperSlide>
+                    testimonials.map((data, index) => {
+                        return <SwiperSlide key={index}>
                             <div className='flex flex-col justify-center items-center text-center pb-12 '>
                                 <img src={commas} alt="" className='mb-6' />
                                 <p className='w-2/3 max-md:w-full text-white text-3xl max-sm:text-xl font-serif leading-10 mb-8'><i>{data.review}</i></p>

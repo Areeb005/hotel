@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import RoomsData from '../data/rooms.json'
+import rooms from '../data/rooms'
 
 import { HiOutlineClock, HiOutlineHome, HiChevronRight, HiOutlineUserCircle, HiOutlineArrowsExpand } from "react-icons/hi";
 import room6 from '../assets/images/room6.jpg'
@@ -13,7 +13,7 @@ import "swiper/css";
 
 const Slider = () => {
 
-    const Rooms = RoomsData.rooms;
+    console.log(rooms);
 
     return <>
         <>
@@ -23,13 +23,14 @@ const Slider = () => {
 
 
                 {
-                    Rooms.map((data) => {
-                        return <SwiperSlide>
+                    rooms.map((data, index) => {
+
+                        return <SwiperSlide key={index}>
                             <div>
                                 <div className="bg-black/40 shadow h-full">
                                     <div className="relative">
                                         <a href="#">
-                                            <img className="w-full" src={room6} alt="" />
+                                            <img className="w-full" src={data.img[0]} alt="" />
                                         </a>
                                         <div className='absolute w-full bottom-0 px-12 py-2 text-white font-light tracking-wider flex bg-black/40'>
                                             <span className='mr-2 flex'><HiOutlineUserCircle className='h-6 w-auto mr-1' />{data.guests} Guests</span> <span className='flex'><HiOutlineArrowsExpand className='h-6 w-auto mr-1' />{data.foot} ft</span>

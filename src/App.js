@@ -10,6 +10,7 @@ import Booking from './pages/Booking';
 import Contact from './pages/Contact';
 import Single from './pages/Single';
 import { useEffect } from 'react';
+import Test from './pages/Test';
 
 
 
@@ -35,6 +36,7 @@ useEffect(() =>{
       <Route path='/booking' element={<Booking />} />
       <Route path='/contact' element={<Contact />} />
       <Route path='/single' element={<Single />} />
+      <Route path='/test' element={<Test />} />
     </Routes>
 
     <Footer />

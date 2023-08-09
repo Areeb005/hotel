@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import RoomsData from '../data/rooms.json'
+import rooms from '../data/rooms'
 import { FreeMode, Pagination } from 'swiper/modules';
 
 
@@ -17,7 +17,7 @@ import 'swiper/css/pagination';
 
 const RoomPageSlider = () => {
 
-    const Rooms = RoomsData.rooms;
+    console.log(rooms);
 
     return <>
         <>
@@ -33,12 +33,12 @@ const RoomPageSlider = () => {
 
 
                 {
-                    Rooms.map((data) => {
+                    rooms.map((data) => {
                         return <SwiperSlide>
 
                             <div className="h-80">
                                 <div className="cursor-pointer">
-                                    <img className="" src={require('../assets/images/bed.jpg')} alt="" />
+                                    <img className="" src={data.img} alt="" />
                                 </div>
                                 <div></div>
                             </div>
