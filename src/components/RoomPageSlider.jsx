@@ -1,46 +1,44 @@
-import React, { useRef, useState } from "react";
+import React from "react";
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import rooms from '../data/rooms'
-import { FreeMode, Pagination } from 'swiper/modules';
-
-
-
-import { HiOutlineClock, HiOutlineHome, HiChevronRight, HiOutlineUserCircle, HiOutlineArrowsExpand } from "react-icons/hi";
-import room6 from '../assets/images/room6.jpg'
-import Button from "../components/Button";
+import { Pagination } from 'swiper/modules';
+import { ImageGroup, Image } from 'react-fullscreen-image'
 
 
 // Import Swiper styles
-import "swiper/css";
 import 'swiper/css/pagination';
 
-const RoomPageSlider = () => {
-
-    console.log(rooms);
+const RoomPageSlider = ({ Images, ActiveImg, data_modal_target, data_modal_toggle }) => {
 
     return <>
         <>
             <Swiper
+                slidesPerView={'auto'}
+                spaceBetween={20}
                 pagination={{
                     clickable: true
                 }}
-                freeMode = {true}
-                slidesPerView={3}
-                spaceBetween={20}
-                modules={[FreeMode, Pagination]}
-                className="mySwiper">
+                modules={[Pagination]}
+                className="mySwiper room123123"
+                breakpoints={{
+                    "600": {
+                        slidesPerView: 'auto',
+                        spaceBetween: 10,
+                    },
+                    "992": {
+                        slidesPerView: 'auto',
+                        spaceBetween: 20,
+                    }
+                }}
+            >
 
 
                 {
-                    rooms.map((data) => {
-                        return <SwiperSlide>
-
-                            <div className="h-80">
-                                <div className="cursor-pointer">
-                                    <img className="" src={data.img} alt="" />
-                                </div>
-                                <div></div>
+                    Images?.map((data, index) => {
+                        return <SwiperSlide key={index}>
+                            <div className="h-80 w-max mb-12 cursor-pointer">
+                                <img src={data} alt="room-images" className='h-80' onClick={(e) => ActiveImg(e)} data-modal-target={data_modal_target} data-modal-toggle={data_modal_toggle} />
                             </div>
                         </SwiperSlide>
                     })

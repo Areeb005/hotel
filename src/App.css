@@ -10,14 +10,32 @@
   background-color: #CA8E46
 }
 
-.swiper-pagination-bullet{
-  background-color: white !important;
-  opacity: 1 !important;
-  width: 5px !important;
-  height: 5px !important;
+.image1,
+.image2 {
+  transition: 1s;
 }
 
-.swiper-pagination-bullet-active{
+/* .swiper-slide{
+  width: max-content !important;
+} */
+
+.room123123 .swiper-slide {
+  width: max-content;
+} 
+
+
+.image-hover-div:hover .image-hover{
+  transform: scale(1.1);
+}
+
+.swiper-pagination-bullet {
+  background-color: white !important;
+  opacity: 1 !important;
+  width: 4px !important;
+  height: 4px !important;
+}
+
+.swiper-pagination-bullet-active {
   background: #CA8E46 !important;
 }
 
@@ -30,11 +48,10 @@
   cursor: pointer;
 }
 
-.img-overlay,
-.img-big-overlay {
+.img-overlay {
   height: 100%;
   max-width: 100%;
-  width: 0px;
+  width: 0%;
   overflow: hidden;
   text-align: center;
   color: transparent;
@@ -50,20 +67,13 @@
 }
 
 .img-div:hover .img-overlay {
-  width: 400px;
+  width: 100%;
   color: white;
   /* padding-top: 30%; */
   background-color: #ca8f469a;
   transition: .5s;
 }
 
-.img-div:hover .img-big-overlay {
-  width: 900px;
-  color: white;
-  /* padding-top: 110px; */
-  background-color: #ca8f469a;
-  transition: .5s;
-}
 
 .img-div img {
   transition: .5s;
@@ -74,20 +84,24 @@
   transition: .5s;
 }
 
-input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: white;
-  opacity: 1; /* Firefox */
+  opacity: 1;
+  /* Firefox */
 }
 
-input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
   color: white;
 }
 
-input::-ms-input-placeholder { /* Microsoft Edge */
+input::-ms-input-placeholder {
+  /* Microsoft Edge */
   color: white;
 }
 
-textarea::placeholder{
+textarea::placeholder {
   color: white;
 }
 

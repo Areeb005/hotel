@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import TwoColumSection from '../components/TwoColumSection';
 import { HiOutlineClock, HiOutlineHome, HiChevronRight, HiOutlineUserCircle, HiOutlineArrowsExpand } from "react-icons/hi";
 import { PiForkKnifeDuotone, PiSwimmingPoolDuotone } from "react-icons/pi";
@@ -8,6 +8,13 @@ import Breadcrumb from '../components/Breadcrumb';
 
 
 const About = () => {
+
+        useEffect(() => {
+            // 👇️ scroll to top on page load
+            window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+        }, []);
+
+
     return <>
         <div className='bg-[url("./assets/images/about-bg1.jpg")] bg-cover bg-top fixed w-full h-full -z-50'>
             <div className='h-full bg-black/40'></div>
@@ -16,7 +23,7 @@ const About = () => {
         <Breadcrumb text1="We Are" text2="Seaside" />
 
         <div className='section-2'>
-            <TwoColumSection/>
+            <TwoColumSection />
         </div>
 
 

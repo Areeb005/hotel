@@ -73,7 +73,7 @@
     }
 
     .select *{
-        @apply text-black
+        @apply bg-orange-950
     }
 
     .calendaer-dates{

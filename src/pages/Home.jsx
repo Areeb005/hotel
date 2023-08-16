@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Button from '../components/Button'
 import TwoColumSection from '../components/TwoColumSection';
 import Testimonials from '../components/Testimonials';
@@ -13,13 +13,16 @@ import sectionImg2 from '../assets/images/section-img2.jpg'
 import sectionLast from '../assets/images/home-last.jpg'
 import ReactPlayer from 'react-player';
 import Slider from '../components/Slider';
-
-
-
+import { TypeAnimation } from 'react-type-animation';
+import { Link } from 'react-router-dom';
 
 
 const Home = () => {
 
+    useEffect(() => {
+        // 👇️ scroll to top on page load
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    }, []);
 
     return <>
         <div className='bg-[url("./assets/images/main-bg.jpg")] bg-cover bg-top fixed w-full h-full -z-10'>
@@ -35,9 +38,29 @@ const Home = () => {
             </div>
             <div className='container m-auto px-12 max-lg:px-4 py-52 absolute top-0'>
                 <div className=''>
-                    <h1 className='text-6xl max-sm:text-5xl max-[420px]:text-3xl font-semibold text-white mb-4'>Enjoy Your Dream <br /> Vacation</h1>
+
+                    <TypeAnimation className='text-6xl max-sm:text-5xl max-[420px]:text-3xl font-semibold text-white mb-4'
+
+                        sequence={[
+                            // Same substring at the start will only be typed once, initially
+                            'Enjoy Your Dream Vacation.',
+                            2000,
+                            'Enjoy Your Dream Honeymoon.',
+                            2000,
+                            'Enjoy Your Dream Trip.',
+                            2000,
+                            'Enjoy Your Dream Hotel.',
+                            2000,
+                        ]}
+                        wrapper='h1'
+                        speed={50}
+                        repeat={Infinity}
+                    />
+                    {/* <h1 className='text-6xl max-sm:text-5xl max-[420px]:text-3xl font-semibold text-white mb-4'>Enjoy Your Dream <br /> Vacation</h1> */}
                     <p className='text-white font-semibold max-sm:text-sm mb-6 w-2/3 max-sm:w-full'>The Seaside Hotel is the right choice for visitors who are searching for a combination of charm, peace and, comfort.</p>
+                   <Link to={'/rooms'}>
                     <Button text={'Choose Room'} />
+                   </Link>
                 </div>
 
             </div>

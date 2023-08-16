@@ -5,6 +5,7 @@ import sectionImg1 from '../assets/images/section-img1.jpg'
 import sectionImg2 from '../assets/images/section-img2.jpg'
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
+import { Link } from 'react-router-dom';
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -12,6 +13,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 const TwoColumSection = () => {
     const main = useRef();
+
+
 
     useLayoutEffect(() => {
         const ctx = gsap.context((self) => {
@@ -21,12 +24,10 @@ const TwoColumSection = () => {
                 y: 70,
                 scrollTrigger: {
                     trigger: image1,
-                    start: 'bottom bottom',
-                    // end: 'top 0%',
+                    start: 'top 50%',
+                    end: 'bottom 50%',
                     scrub: true,
                 },
-                duration: 20,
-                
             });
 
             const image2 = self.selector('.image2');
@@ -39,12 +40,13 @@ const TwoColumSection = () => {
                     // end: 'top 20%',
                     scrub: true,
                 },
-                duration: 20,
-                
             });
         }, main); // <- Scope!
         return () => ctx.revert(); // <- Cleanup!
-    }, []);
+    }, [])
+
+
+
 
     return <>
         <div ref={main} className="m-auto px-12 py-12 max-lg:px-4">
@@ -65,7 +67,9 @@ const TwoColumSection = () => {
                         <h2 className='text-4xl text-white font-semibold mb-6'>The Luxury Experience You’ll Remember</h2>
                         <div className='h-0.5 w-12 bg-[#A27913] mb-6'></div>
                         <p className='text-white tracking-wide font-light mb-6'>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
-                        <Button text="Book Now" iconAfter={<HiChevronRight className='h-5 w-auto' />} />
+                        <Link to={'/booking'}>
+                            <Button text="Book Now" iconAfter={<HiChevronRight className='h-5 w-auto' />} />
+                        </Link>
                     </div>
                 </div>
             </div>

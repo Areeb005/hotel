@@ -32,7 +32,7 @@ const Navbar = () => {
                         <a href="/" className="flex items-center">
                             <img src={logo} className="h-14 mr-3 max-[425px]:h-12" alt="Andtour Logo" /></a>
                         <div className="flex md:order-2">
-                            <Button text={'Booking'} className={"max-md:hidden"} />
+                            <Link to={'/booking'}><Button text={'Booking'} className={"max-md:hidden"} /></Link>
                             <button data-collapse-toggle="navbar-cta" type="button" className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden" onClick={showMenu2 === false ? () => setShowMenu2(true) : () => setShowMenu2(false)} aria-controls="navbar-cta" aria-expanded="false">
                                 <span className="sr-only">Open main menu</span>
                                 <svg className="w-12 h-8 max-md:text-white" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path></svg>
@@ -47,7 +47,7 @@ const Navbar = () => {
                                     <Link to={'/about'} className={`nav-links ${url === '/about' && 'text-[#CA8E46]'}`}  >About</Link>
                                 </li>
                                 <li>
-                                    <Link to={'/room-page1'} className={`nav-links ${url === '/room-page1' && 'text-[#CA8E46]'}`}  >Rooms</Link>
+                                    <Link to={'/rooms'} className={`nav-links ${url === '/rooms' && 'text-[#CA8E46]'}`}  >Rooms</Link>
                                 </li>
                                 <li>
                                     <Link to={'/booking'} className={`nav-links ${url === '/booking' && 'text-[#CA8E46]'}`}  >Booking</Link>
@@ -69,7 +69,7 @@ const Navbar = () => {
                                     <Link to={'/about'} className={`nav-links ${url === '/about' && 'text-[#CA8E46]'}`}  >About</Link>
                                 </li>
                                 <li>
-                                    <Link to={'/room-page1'} className={`nav-links ${url === '/room-page1' && 'text-[#CA8E46]'}`}  >Rooms</Link>
+                                    <Link to={'/rooms'} className={`nav-links ${url === '/rooms' && 'text-[#CA8E46]'}`}  >Rooms</Link>
                                 </li>
                                 <li>
                                     <Link to={'/booking'} className={`nav-links ${url === '/booking' && 'text-[#CA8E46]'}`}  >Booking</Link>
@@ -97,7 +97,7 @@ const Navbar = () => {
                         <a href="/" className="flex items-center">
                             <img src={logo} className="h-14 mr-3 max-[425px]:h-12" alt="Andtour Logo" /></a>
                         <div className="flex md:order-2">
-                            <Button text={'Booking'} className={"max-md:hidden"} />
+                            <Link to={'/booking'}><Button text={'Booking'} className={"max-md:hidden"} /></Link>
                             <button data-collapse-toggle="navbar-cta" type="button" className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden" onClick={showMenu2 === false ? () => setShowMenu2(true) : () => setShowMenu2(false)} aria-controls="navbar-cta" aria-expanded="false">
                                 <span className="sr-only">Open main menu</span>
                                 <svg className="w-12 h-8 max-md:text-white" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path></svg>
@@ -112,7 +112,7 @@ const Navbar = () => {
                                     <Link to={'/about'} className={`nav-links ${url === '/about' && 'text-[#CA8E46]'}`}  >About</Link>
                                 </li>
                                 <li>
-                                    <Link to={'/room-page1'} className={`nav-links ${url === '/room-page1' && 'text-[#CA8E46]'}`}  >Rooms</Link>
+                                    <Link to={'/rooms'} className={`nav-links ${url === '/rooms' && 'text-[#CA8E46]'}`}  >Rooms</Link>
                                 </li>
                                 <li>
                                     <Link to={'/booking'} className={`nav-links ${url === '/booking' && 'text-[#CA8E46]'}`}  >Booking</Link>
@@ -134,7 +134,7 @@ const Navbar = () => {
                                     <Link to={'/about'} className={`nav-links ${url === '/about' && 'text-[#CA8E46]'}`}>About</Link>
                                 </li>
                                 <li>
-                                    <Link to={'/room-page1'} className={`nav-links ${url === '/room-page1' && 'text-[#CA8E46]'}`}>Rooms</Link>
+                                    <Link to={'/rooms'} className={`nav-links ${url === '/rooms' && 'text-[#CA8E46]'}`}>Rooms</Link>
                                 </li>
                                 <li>
                                     <Link to={'/booking'} className={`nav-links ${url === '/booking' && 'text-[#CA8E46]'}`}  >Booking</Link>
