@@ -1,0 +1,22 @@
+{
+    "testimonials": [
+        {
+        "id": 1,
+        "name": "Benedict Mervine",
+        "review": "My stay at Marina hotel was truly exceptional. From the breathtaking ocean views right from my room to the impeccable service, every moment felt like a dream. This luxurious escape exceeded all expectations and left me rejuvenated and longing to return.",
+        "designation": "Customer"
+    }, 
+        {
+        "id": 2,
+        "name": "Doretta Mccourtney",
+        "review": "The Premier Room at Marina hotel provided a level of comfort and elegance that I've rarely experienced. The attention to detail, combined with the stunning surroundings, created an unforgettable getaway. I can't wait to relive the luxury and serenity on my next visit.",
+        "designation": "Customer"
+    }, 
+        {
+        "id": 3,
+        "name": "Carole Hunckler",
+        "review": "Indulging in the Deluxe Room at Marina was an absolute treat. The fusion of modern amenities and coastal charm was perfect, and the staff's warm hospitality made me feel like royalty. This stay redefined luxury for me, making it a top choice for any discerning traveler.",
+        "designation": "Customer"
+    }
+]
+}
