@@ -1,0 +1,104 @@
+nav.Main-Nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;  
+    padding: 20px 15px;
+  }
+  
+  .nav-logo {
+    text-align: left;
+    width: 100%;
+  }
+  
+  .navigation-options {
+    text-align: center;
+    width: 50%;
+  }
+  
+  .main-ul {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: end;
+    margin-bottom: 0px !important;
+  }
+  
+  .main-ul>li {
+    list-style: none;
+    /* margin: 0px 20px; */
+    width: 120px;
+  
+  }
+  
+  .main-ul>li>a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: 0.5s;
+  }
+  
+  ul.sublist {
+    background: black;
+    padding: 20px 0px;
+    /* text-align: center; */
+    margin: 15px 0px;
+    position: absolute;
+    /* left: 135px; */
+    display: none;
+  }
+  
+  ul.sublist>li {
+    list-style: none;
+  }
+  
+  ul.sublist>li>a {
+    text-transform: none;
+    color: white;
+  }
+  
+  .lang-btn-main>li {
+    list-style: none;
+  }
+  
+  .lang-btn-main>li>a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+  }
+  
+  .nav-btn>button {
+    background: none;
+    border: 2px solid white;
+    border-radius: 25px;
+    color: white;
+    padding: 10px 25px;
+    white-space: nowrap;
+  }
+  
+  /* hover styling start here  */
+  .list1{
+    left: 460px;
+    /* display: block !important; */
+    font-weight: 600;
+    margin: 20px;
+    text-align: left;
+  }
+  .list1 > li{
+    margin: 20px;
+  }
+  #List1:hover+.list1 {
+    display: block;
+   
+  }
+  
+  #List2:hover+.list2 {
+    display: block;
+  }
+  
+  #List3:hover+.list3 {
+    display: block;
+  }
+  
+  #List4:hover+.list4 {
+    display: block;
+  }
